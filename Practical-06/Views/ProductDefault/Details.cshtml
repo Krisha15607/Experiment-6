@@ -1,0 +1,44 @@
+﻿@model Practical_06.Models.Product
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Product Details";
+}
+
+<h1>Product Details</h1>
+
+<table border="1" cellpadding="10" cellspacing="0" width="100%">
+    <tr>
+        <td colspan="2">
+            <img src="@Model.Image" alt="@Model.ProductName" width="200" height="150" />
+        </td>
+    </tr>
+    <tr>
+        <th>Product ID</th>
+        <td>@Model.ProductId</td>
+    </tr>
+    <tr>
+        <th>Product Name</th>
+        <td>@Model.ProductName</td>
+    </tr>
+    <tr>
+        <th>Description</th>
+        <td>@Model.Description</td>
+    </tr>
+    <tr>
+        <th>Price</th>
+        <td>₹ @Model.Price</td>
+    </tr>
+    <tr>
+        <th>Category</th>
+        <td>@Model.Category</td>
+    </tr>
+    <tr>
+        <th>Quantity</th>
+        <td>@Model.Quantity</td>
+    </tr>
+</table>
+
+<p>
+    <a href="@Url.Action("Index", "ProductDefault")">Back to Product Catalog</a>
+</p>
